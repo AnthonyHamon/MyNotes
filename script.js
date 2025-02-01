@@ -192,7 +192,7 @@ function saveChanges(i) {
 
 function abort(){
     addEventListener()
-    setTimeout(renderNote, 175); 
+    setTimeout(renderNote(), 175); 
 }
 
 function emptyMainPage() {
