@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/trash-favicon.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+
+<body onload="renderTrash()">
+
+    <header class="header">
+        <div class="navMenu">
+            <img class="menuButton" onclick="showMenu();" id="navMenuIcon" src="img/menu-4-64.png" alt="">
+            <div class="menu">
+                <div class="overlayMenuResizing">
+                    <img src="img/note-2-40.png" alt="">
+                </div>
+                <span>Notizen</span>
+            </div>
+        </div>
+        <h1>MY NOTES</h1>
+    </header>
+
+    <main id="main">
+
+        <!-- Overlay Menu -->
+        <aside onmouseenter="toggleOverlay()" id="hoverMenu" class="iconForOverlay">
+            <div class="overlayMenuResizing">
+                <a href="index.html"><img src="img/note-2-48.png" alt=""></a>
+                <a href="index.html" id="notice" class="hideText">Notizen</a>
+            </div>
+            <div class="overlayMenuResizing">
+                <a href="trash.html"><img src="img/trash-2-48.png" alt=""></a>
+                <a href="trash.html" id="trash" class="hideText">Papierkorb</a>
+            </div>
+        </aside>
+
+        <!-- Empty page until notes are deleted -->
+        <section>
+            <div id="changeTrashPage" class="divForAllNotes">
+                <div class="pageDescription">
+                    <img src="img/trash-2-128.png" alt="">
+                    <span>Gelöschten Notizen können wieder hinzugefügt werden</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

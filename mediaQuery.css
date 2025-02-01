@@ -1,0 +1,118 @@
+@media(max-width:1000px){
+    .showText{
+        opacity: 0 !important;
+    }
+
+    .menuButton{
+        display: none;
+    }
+
+    .header{
+        padding-right: 50px;
+    }
+
+    .openedNote{
+        width: 40vw;
+    }
+}
+
+@media(max-width: 800px){
+    .hideText{
+        transform: unset !important;
+        opacity: 1 !important;
+    }
+    
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .iconForOverlay{
+        height: unset;
+        max-width: unset;
+        flex-direction: unset;
+        position: unset;
+    }
+
+    .inputSection{
+        margin-top: 90px;
+    }
+
+    .pageDescription{
+        height: 61vh;
+    }
+
+    .menuButton{
+        display: none;
+    }
+
+    .divForAllNotes{
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .notes{
+        margin-top: unset;
+    }
+
+    .header {
+        padding-right: 50px;
+    }
+
+    .inputSection{
+        margin-top: 30px;
+    }
+
+    .openedNote{
+        width: 45vw;
+    }
+}
+
+@media(max-width:610px){
+    .divForInputs{
+        width: 95vw;
+    }
+
+    .divForAllNotes{
+        margin-top: 50px;
+        gap: 40px;
+    }
+
+    .openedNote{
+        width: 55vw;
+    }
+}
+
+
+@media(max-width:503px){
+    .notes{
+        margin-left: unset;
+    }
+    .header {
+        padding-right: 20px;
+    }
+
+    .openedNote{
+        width: 70vw;
+    }
+}
+
+@media(max-width: 380px){
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    .header {
+        padding-right: 10px;
+    }
+
+    .iconForOverlay{
+        top: 67px;
+    }
+
+    .openedNote{
+        width:90vw;
+    } 
+}

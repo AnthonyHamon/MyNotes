@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <script src="script.js"></script>
+
+</head>
+
+
+<body onload="renderNote()">
+    <div onmouseenter="hideOverlay()" onclick="resetNotesInput()" id="fullPage" class="fullPage">
+        <!-- div to overflow bg when notes is open-->
+<div onclick="abort()" id="page-bg" class="page-bg d-none"></div>
+
+        <!------------------------------------------------------->
+
+        <header class="header">
+            <div class="navMenu">
+                <img class="menuButton" onclick="showMenu();" id="navMenuIcon" src="img/menu-4-64.png" alt="">
+                <div class="menu">
+                    <div class="overlayMenuResizing">
+                        <img src="img/note-2-40.png" alt="">
+                    </div>
+                    <span>Notizen</span>
+                </div>
+            </div>
+            <h1>MY NOTES</h1>
+        </header>
+
+        <!------------------ main Page ------------->
+
+
+        <main id="main">
+
+            <!-- Overlay Menu -->
+        <aside onmouseenter="toggleOverlay()" id="hoverMenu" class="iconForOverlay">
+            <div class="overlayMenuResizing">
+                <a href="index.html"><img src="img/note-2-48.png" alt=""></a>
+                <a href="index.html" id="notice" class="hideText">Notizen</a>
+            </div>
+            <div class="overlayMenuResizing">
+                <a href="trash.html"><img src="img/trash-2-48.png" alt=""></a>
+                <a href="trash.html" id="trash" class="hideText">Papierkorb</a>
+            </div>
+        </aside>
+
+            <section id="closeInputSection" class="inputSection">
+                <div id="clickable" class="divForInputs">
+                    <!-- empty input for JS onlick -> input of title -->
+                    <input id="titlesInput" class="notesTitle hide" type="text" placeholder="Titel">
+                    <input id="textInput" class="notesInput" type="text" placeholder="Notiz schreiben...">
+                    <div class="divForButton">
+                        <button onclick="addNote();" id="buttonInput" class="buttonInput hide">Hinzufügen</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Empty page (no notes available) -->
+                    <div id="changeMainPage" class="divForAllNotes">
+                        <div class="pageDescription">
+                            <img src="img/note-2-128.png" alt="">
+                            <span>Hinzugefügte Notizen werden hier angezeigt</span>
+                        </div>
+                    </div> 
+        </main>
+    </div>
+</body>
+
+<script src="loadFunction.js"></script>
+
+</html>
